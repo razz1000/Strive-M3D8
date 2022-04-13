@@ -1,0 +1,12 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.list-group {
+    list-style-type: none;
+}
+
+li { 
+    background-color: rgb(221, 216, 216) !important;
+}
