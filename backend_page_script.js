@@ -26,7 +26,10 @@ let formOnSubmitFunction = async (event) => {
   if (response.ok) {
     const body = await response.json();
 
-    alert("the new server generated ID is:" + body._id);
+    alert(
+      "You have just posted a new itme in the store with this id: " + body._id
+    );
     console.log(response);
   }
+  window.location.reload();
 };

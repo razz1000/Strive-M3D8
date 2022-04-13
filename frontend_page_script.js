@@ -69,6 +69,7 @@ let deleteButtonFunction = async (event) => {
     event.target.parentElement.parentElement.querySelector(
       ".unique-name"
     ).innerText;
+
   const response = await fetch(
     "https://striveschool-api.herokuapp.com/api/product/" + uniqueId,
     options2
