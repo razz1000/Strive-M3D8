@@ -1,0 +1,10 @@
+form {
+    background-color: rgb(235, 215, 215);
+    padding: 5em;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 1.2em;
+    font-weight: 500;
+}

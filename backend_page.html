@@ -15,35 +15,77 @@
       integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
       crossorigin="anonymous"
     />
-
-    <div class="container">
-        <div class="row">
-            <form onsubmit="formOnSubmitFunction(event)">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" value="name" required>
-                </div>
-                <div class="form-group">
-                  <label for="description">Description</label>
-                  <textarea id="description" name="description" rows="4" placeholder="Please add your description" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="brand">Please add your brand</label>
-                    <input type="text" class="form-control" id="brand" aria-describedby="brand" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="imageUrl">Please add your image URL</label>
-                    <input type="text" class="form- control" id="image" aria-describedby="image" required>
-                  </div>
-                  <div class="form-group">
-                    <label for="price">Please add your price</label>
-                    <input type="number" class="form-control" id="price" aria-describedby="price" required>
-                  </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+    <link rel="stylesheet" href="stylesheet-backend-page.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <form onsubmit="formOnSubmitFunction(event)">
+            <div class="form-group">
+              <label for="name">Name of product:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                aria-describedby="name"
+                value="name"
+                placeholder="Please enter the name of the product"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="description">Description of the product:</label><br />
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                cols="48"
+                placeholder="Please add a description of the product"
+                required
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brand">What is the brand of the product:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="brand"
+                aria-describedby="brand"
+                placeholder="Please enter the brand"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="imageUrl"
+                >Please add an image URL of the product:</label
+              ><br />
+              <input
+                type="text"
+                class="form- control"
+                id="image"
+                style="width: 375px"
+                aria-describedby="image"
+                placeholder="Please add an image URL of the product"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="price">Please add the price of the product:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="price"
+                aria-describedby="price"
+                placeholder="Please add the price of the product"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
+      </div>
     </div>
-
 
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
