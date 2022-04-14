@@ -8,3 +8,13 @@ label {
     font-size: 1.2em;
     font-weight: 500;
 }
+
+form.validated textarea:invalid,
+form.validated input:invalid {
+    border-color: red;
+}
+
+form.validated textarea:valid,
+form.validated textarea:valid {
+    border-color: green;
+}
