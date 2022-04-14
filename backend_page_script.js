@@ -44,7 +44,7 @@ window.onload = async () => {
 let formOnSubmitFunction = async (event) => {
   console.log(event.target);
   event.preventDefault();
-
+  buttonLoadingFunction(true);
   const theCurrentFormEvent = {
     name: document.getElementById("name").value,
     description: document.getElementById("description").value,
@@ -65,6 +65,8 @@ let formOnSubmitFunction = async (event) => {
 
   if (response.ok || eventId) {
     const body = await response.json();
+
+    buttonLoadingFunction(false);
 
     alert("You just edited : " + body._id);
     console.log(response);
@@ -98,12 +100,36 @@ let deleteEventButton = async (event) => {
   const parsedBody = await response.json();
   console.log(parsedBody);
 
-  alert(" Deleted");
-  window.location.assign("./frontend_page.html");
+  alertContainer(
+    "You successfully deleted the product, with the following ID: " + eventId
+  );
+  setTimeout(() => {
+    window.location.assign("./frontend_page.html");
+  }, 2500);
 };
 
 /* The Validate event */
 let validateEvent = (event) => {
   console.log(event.target.parentElement.querySelector(".form1"));
   document.querySelector(".form1").classList.add("validated");
+};
+
+/* The Loading Button  */
+
+let buttonLoadingFunction = (loadinstate) => {
+  const submitbutton = document.querySelector(".submitbutton");
+  if (loadinstate) {
+    submitbutton.innerHTML = `<div class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>`;
+  } else {
+    submitbutton.querySelector(".spinner-border").remove();
+  }
+};
+
+let alertContainer = (msg) => {
+  let alertContainer = document.querySelector(".alert-container");
+
+  alertContainer.innerHTML = `<div class="alert alert-danger" role="alert">${msg}
+</div>`;
 };

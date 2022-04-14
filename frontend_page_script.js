@@ -1,7 +1,3 @@
-const URLAPI = "https://striveschool-api.herokuapp.com/api/product/";
-const eventId = new URLSearchParams(window.location.search).get("userId");
-console.log(eventId);
-
 const options = {
   method: "GET",
   headers: {
@@ -33,7 +29,7 @@ let frontendFunction = async () => {
                 <p>Description: ${userinput.description}</p>
                 <p><a href="${userinput.imageUrl}">Link to an image of the product</a></p>
                 <p class="unique-id">${userinput._id}</p>
-                <p><a href="./details_page.html?userId=${userinput._id}">Wiev the details page of this product</a></p>
+                <p><a href="./details_page.html?userId=${userinput._id}">View the details page of this product</a></p>
                 <small>Created at: ${userinput.createdAt}</small>
                 
               </div>
